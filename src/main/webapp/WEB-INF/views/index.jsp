@@ -9,5 +9,10 @@
    <h1>This is home page</h1>
    <h2>Called by home controlller</h2>
    <h1> url /home</h1>
+   <%
+       request.getAttribute
+
+   %>
+
 </body>
 </html>

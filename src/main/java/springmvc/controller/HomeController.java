@@ -1,6 +1,7 @@
 package springmvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 //spring mvc application creation steps
 // 1 Configure the Dispatcher Servlet in web.xml
@@ -12,8 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
     @RequestMapping("/home") //when ever we will fire /home  this homecobtroller will activate and method will display index as view
     //then our viewresolver wll resolve index and view wil be   <!-- /WEB-INF/views/index.jsp-->
-    public String home(){
+    public String home(Model model){
         System.out.println("this is home url");
+        model.addAttribute("name","Saggy");// we can use this model in servlet request
         return "index";
     }
     @RequestMapping("/about")
